@@ -1,6 +1,0 @@
-PS C:\Users\Administrator> cd C:\radar_app
-PS C:\radar_app> python listener.py
-
-
-PS C:\Users\Administrator> cd C:\radar_app
-PS C:\radar_app> python api_server.py
