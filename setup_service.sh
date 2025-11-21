@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Source conda dynamically
+if [ -f "$USER_HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+    source "$USER_HOME/anaconda3/etc/profile.d/conda.sh"
+else
+    echo "conda.sh not found in $USER_HOME/anaconda3/etc/profile.d/"
+    exit 1
+fi
+
+# Activate environment
+conda activate radar
+pip install -r requirements.txt
+
 # Define variables
 SERVICE_NAME="radar"
 SERVICE_FILE="/etc/systemd/system/${SERVICE_NAME}.service"
